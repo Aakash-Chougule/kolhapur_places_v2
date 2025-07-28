@@ -1,0 +1,76 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kolhapur Tourist Guide</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="images/letter_k_black_97020/Letter_K_black_Icon_16.png" type="image/png">
+
+</head>
+<body>
+  <div class="loader" id="pageLoader"></div>
+
+  <header>
+    <h1 data-translate="title">Kolhapur Tourist Guide</h1>
+    <nav>
+      <a href="index.html" data-translate="home">Home</a>
+      <a href="details.html" data-translate="details">Places</a>
+      <a href="contact.html" data-translate="contact">Contact Us</a>
+      <select id="languageSelect">
+        <option value="en">English</option>
+        <option value="hi">हिंदी</option>
+        <option value="mr">मराठी</option>
+      </select>
+      <label class="switch">
+        <input type="checkbox" id="darkToggle">
+        <span class="slider round"></span>
+      </label>
+    </nav>
+  </header>
+ <main>
+  <section class="intro">
+    <p data-translate="intro">
+      Kolhapur is a historic city in Maharashtra known for its temples, palaces, lakes, and rich cultural heritage. It is famous for the Mahalaxmi Temple, Kolhapuri chappals, spicy cuisine, and vibrant festivals.
+    </p>
+    <img src="images/Kolhapur view.jpeg" alt="Kolhapur City View" class="homepage-image" />
+  </section>
+
+  <section class="quick-facts">
+    <h2>Highlights of Kolhapur</h2>
+    <ul>
+      <li>Mahalaxmi Temple – iconic and spiritual center.</li>
+      <li>New Palace – beautiful blend of history and architecture.</li>
+      <li>Kolhapuri Cuisine – fiery and flavorful delights.</li>
+      <li>Kolhapuri Chappals – handcrafted leather footwear.</li>
+    </ul>
+  </section>
+</main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Kolhapur Tourist Guide. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="js/lang.js"></script>
+  <script src="js/theme.js"></script>
+  <script>
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("pageLoader");
+    if (loader) {
+      loader.style.display = "none";
+    }
+  });
+
+  // Optional: show loader briefly when clicking navigation links
+  const links = document.querySelectorAll("a[href]");
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      document.getElementById("pageLoader").style.display = "block";
+    });
+  });
+</script>
+
+</body>
+</html>
